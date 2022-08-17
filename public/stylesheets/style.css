@@ -1,0 +1,19 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: aliceblue;
+    background-color: rgb(32, 33, 36);
+  }
+
+img {
+  width: 500px;
+}
+
+.logo {
+  width: 25px;
+}
+
+input {
+  width: 15rem;
+}
+
+  

@@ -1,6 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import indexRoute from './routes/index';
+import api from './routes/apiVxod';
 
 const PORT = 3000;
 const app = express();
