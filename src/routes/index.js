@@ -7,7 +7,7 @@ const route = express.Router();
 
 route.get('/', async (req, res) => {
   try {
-    const initState = { path: req.originalUrl};
+    const initState = { path: req.originalUrl, userSession: req.session.userSession };
     const html = renderToString(<Layout initState={initState} />);
     res.write('<!DOCTYPE html>');
     res.end(html);
@@ -18,7 +18,7 @@ route.get('/', async (req, res) => {
 
 route.get('/registration', async (req, res) => {
   try {
-    const initState = { path: req.originalUrl};
+    const initState = { path: req.originalUrl, userSession: req.session.userSession };
     const html = renderToString(<Layout initState={initState} />);
     res.write('<!DOCTYPE html>');
     res.end(html);
@@ -29,7 +29,18 @@ route.get('/registration', async (req, res) => {
 
 route.get('/login', async (req, res) => {
   try {
-    const initState = { path: req.originalUrl};
+    const initState = { path: req.originalUrl, userSession: req.session.userSession };
+    const html = renderToString(<Layout initState={initState} />);
+    res.write('<!DOCTYPE html>');
+    res.end(html);
+  } catch (err) {
+    console.error(err);
+  }
+});
+
+route.get('/korzina', async (req, res) => {
+  try {
+    const initState = { path: req.originalUrl, userSession: req.session.userSession };
     const html = renderToString(<Layout initState={initState} />);
     res.write('<!DOCTYPE html>');
     res.end(html);

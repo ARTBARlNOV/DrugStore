@@ -4,6 +4,11 @@ body {
     background-color: rgb(32, 33, 36);
   }
 
+.container {
+  width: 1024px;
+  padding: 20px;
+}
+
 img {
   width: 500px;
 }
@@ -12,7 +17,7 @@ img {
   width: 25px;
 }
 
-input {
+.inputttt {
   width: 15rem;
 }
 

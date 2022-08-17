@@ -11,7 +11,7 @@ function App({ userSession }) {
   return (
     <>
       <NavBar authState={authState} setAuthState={setAuthState} />
-      <div className="containet">
+      <div className="container">
         <Routes>
           {/* <Route path="/" element={<Main authState={authState} />} /> */}
           <Route path="/registration" element={<Registration setAuthState={setAuthState} />} />
