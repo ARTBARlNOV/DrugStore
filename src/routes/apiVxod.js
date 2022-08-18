@@ -5,12 +5,12 @@ import { User } from '../db/models';
 const route = express.Router();
 
 route.post('/registration', async (req, res) => {
-  const { email, password } = req.body;
+  const { name, email, password } = req.body;
   const hashPassword = await bcrypt.hash(password, 10);
   try {
     const user = await User.findOne({ where: { email } });
     if (!user) {
-      const newUser = await User.create({ email, password: hashPassword });
+      const newUser = await User.create({ name, email, password: hashPassword });
       req.session.userSession = { email: newUser.email };
       return res.json({ email: newUser.email });
     }

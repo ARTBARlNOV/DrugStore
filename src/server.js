@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import session from 'express-session';
 import store from 'session-file-store';
 import indexRoute from './routes/index';
-import authCheck from './middlewares/authCheck';
+// import authCheck from './middlewares/authCheck';
 import apiVxod from './routes/apiVxod';
 import DrugList from './routes/DrugList';
 import Korzina from './routes/Korzina';
@@ -15,7 +15,7 @@ const FileStore = store(session);
 
 const sessionConfig = {
   name: 'user_sid', // Имя куки для хранения id сессии. По умолчанию - connect.sid
-  secret: process.env.SESSION_SECRET ?? 'test',	// Секретное слово для шифрования, может быть любым
+  secret: process.env.SESSION_SECRET ?? 'test',	 // Секретное слово для шифрования, может быть любым
   resave: false, // Пересохранять ли куку при каждом запросе
   saveUninitialized: false, // Создавать ли сессию без инициализации ключей в req.session
   store: new FileStore(),

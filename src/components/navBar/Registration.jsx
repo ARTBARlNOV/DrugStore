@@ -34,7 +34,7 @@ export default function Registration({ setAuthState }) {
       <form onSubmit={submitHandler}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
-          <input name="name" onChange={changeHandler} value={inputs.name} type="text" className="inputttt form-control" id="exampleInputEmail1" aria-describedby="nameHelp" />
+          <input name="name" onChange={changeHandler} value={inputs.name} type="text" className="inputttt form-control" id="exampleInputName" aria-describedby="nameHelp" />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
