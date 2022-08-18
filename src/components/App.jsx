@@ -3,10 +3,11 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './navBar/Login';
 import NavBar from './navBar/NavBar';
 import Registration from './navBar/Registration';
+import DrugList from './DrugList';
 
-function App({ userSession }) {
+function App({ drug, userSession }) {
+  console.log(drug);
   const [authState, setAuthState] = useState(userSession || null);
-  console.log(authState, userSession);
 
   return (
     <>
@@ -16,6 +17,7 @@ function App({ userSession }) {
           {/* <Route path="/" element={<Main authState={authState} />} /> */}
           <Route path="/registration" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
+          <Route path="/DrugList" element={<DrugList drug={drug} setAuthState={setAuthState} />} />
         </Routes>
       </div>
     </>

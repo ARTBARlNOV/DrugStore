@@ -1,6 +1,6 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
-// import { User } from '../db/models';
+import { User } from '../db/models';
 
 const route = express.Router();
 
@@ -25,7 +25,7 @@ route.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({ where: { email } });
     if (user) {
-      const checkPass = await bcrypt.compare(password, user.password); // возвращает boolean значение
+      const checkPass = await bcrypt.compare(password, user.password);
       if (checkPass) {
         req.session.userSession = { email: user.email };
         return res.json({ email: user.email });

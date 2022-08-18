@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Korzina from './Korzina';
+import DrugList from '../DrugList';
 
 export default function NavBar({ authState, setAuthState }) {
   const navigate = useNavigate();
@@ -32,13 +33,21 @@ export default function NavBar({ authState, setAuthState }) {
                     <NavLink to="/login" className="nav-link">Авторизация</NavLink>
                   </li>
                   <li className="nav-item">
+                    <NavLink to="/Druglist" className="nav-link">
+                      <DrugList />
+                      Список товаров
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
                     <NavLink to="/korzina" className="nav-link"><Korzina /></NavLink>
                   </li>
                 </>
               ) : (
-                <li className="nav-item">
-                  <NavLink onClick={logoutHandler} className="nav-link">Выход</NavLink>
-                </li>
+                <div>
+                  <li className="nav-item">
+                    <NavLink onClick={logoutHandler} className="nav-link">Выход</NavLink>
+                  </li>
+                </div>
               )}
           </ul>
         </div>

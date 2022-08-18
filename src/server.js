@@ -5,6 +5,8 @@ import store from 'session-file-store';
 import indexRoute from './routes/index';
 import authCheck from './middlewares/authCheck';
 import apiVxod from './routes/apiVxod';
+import DrugList from './routes/DrugList';
+import Korzina from './routes/Korzina';
 
 const PORT = 3000;
 const app = express();
@@ -31,8 +33,10 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.use('/', indexRoute);
-app.use(authCheck);
+// app.use(authCheck);
 app.use('/api', apiVxod);
+app.use('/DrugList', DrugList);
+app.use('/Korzina', Korzina);
 
 app.listen(PORT, () => {
   console.log('Server start on', PORT);
