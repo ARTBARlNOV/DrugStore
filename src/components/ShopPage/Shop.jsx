@@ -7,7 +7,6 @@ export default function Shop() {
   const { productItems } = data;
 
   return (
-
     <div className="shop-container">
       <div className="products">
         { productItems.map((productItem) => (
