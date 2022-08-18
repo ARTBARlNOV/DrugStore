@@ -9,7 +9,6 @@ import Korzina from './navBar/Korzina';
 function App({ userSession }) {
   const [authState, setAuthState] = useState(userSession || null);
   console.log(authState, userSession);
-
   return (
     <>
       <NavBar authState={authState} setAuthState={setAuthState} />
