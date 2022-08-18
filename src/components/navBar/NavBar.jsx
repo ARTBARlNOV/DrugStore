@@ -26,6 +26,9 @@ export default function NavBar({ authState, setAuthState }) {
             {!authState
               ? (
                 <>
+                <li className="nav-item">
+                    <NavLink to="/shop" className="nav-link active" aria-current="page">Магазин</NavLink>
+                  </li>
                   <li className="nav-item">
                     <Link to="/registration" className="nav-link active" aria-current="page">Регистрация</Link>
                   </li>

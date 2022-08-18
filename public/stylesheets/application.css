@@ -11,14 +11,15 @@
 /* element styling */
 html {
   height: 100%;
-  background-color: #32bb7d;
+  background: url(../images/diamond-bg.jpg);
   background-attachment: fixed;
   line-height: 1.4;
+  background-color: rgb(32, 33, 36);;
 }
 
-body {
+/* body {
   height: 100%;
-}
+} */
 
 a {
   color: #32bb7d;

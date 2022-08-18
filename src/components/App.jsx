@@ -6,6 +6,7 @@ import Registration from './navBar/Registration';
 import DrugList from './DrugList';
 import Privetstvie from './navBar/Privetstvie';
 import Korzina from './navBar/Korzina';
+import Shop from './ShopPage/Shop';
 
 function App({ drug, userSession }) {
   console.log(drug);
@@ -16,6 +17,8 @@ function App({ drug, userSession }) {
       <div className="container">
         <Routes>
           <Route path="/" element={<Privetstvie authState={authState} />} />
+          {/* <Route path="/" element={<Shop setAuthState={setAuthState} />} /> */}
+          <Route path="/shop" element={<Shop setAuthState={setAuthState} />} />
           <Route path="/registration" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
           <Route path="/DrugList" element={<DrugList drug={drug} setAuthState={setAuthState} />} />
