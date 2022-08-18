@@ -5,9 +5,9 @@ export default function Privetstvie({ authState }) {
     <div>
       <h1>Main Page</h1>
       <p>
-        Привет,
+        Добрый день,
         {' '}
-        {authState ? `${authState.name}` : 'гость'}
+        {authState ? `${authState.name}` : 'покупатель'}
       </p>
     </div>
   );
