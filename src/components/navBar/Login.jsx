@@ -30,7 +30,7 @@ export default function Login({ setAuthState }) {
 
   return (
     <div>
-      <h3>Login</h3>
+      <h3>Авторизация</h3>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="inputttt form-label">Email</label>
