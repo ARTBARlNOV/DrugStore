@@ -41,4 +41,3 @@ app.use('/Korzina', Korzina);
 app.listen(PORT, () => {
   console.log('Server start on', PORT);
 });
-//
