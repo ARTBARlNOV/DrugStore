@@ -1,27 +1,24 @@
-import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import data from '../../../testData/testData';
+import React, { useState } from 'react';
 
-export default function Shop() {
-  const navigate = useNavigate();
-  const { productItems } = data;
+export default function Shop({ drug }) {
+  const [drugState, setdrugState] = useState(drug);
 
   return (
     <div className="shop-container">
       <div className="products">
-        { productItems.map((productItem) => (
-          <div className="card">
+        { drug?.map((el) => (
+          <div className="card" key={el.id}>
             <div>
               <img
                 className="product-image"
-                src={productItem.img}
-                alt={productItem.name}
+                src={el.img}
+                alt={el.name}
               />
             </div>
-            <h3 className="product-name">{productItem.name}</h3>
+            <h3 className="product-name">{el.name}</h3>
 
             <div className="product-price">
-              {productItem.price}
+              {el.price}
             </div>
             <div>
               <button className="product-add-btn">Купить</button>

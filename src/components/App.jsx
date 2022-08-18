@@ -9,7 +9,7 @@ import Korzina from './navBar/Korzina';
 import Shop from './ShopPage/Shop';
 
 function App({ drug, userSession }) {
-  console.log(drug);
+  // console.log(drug);
   const [authState, setAuthState] = useState(userSession || null);
   return (
     <>
@@ -18,7 +18,7 @@ function App({ drug, userSession }) {
         <Routes>
           <Route path="/" element={<Privetstvie authState={authState} />} />
           {/* <Route path="/" element={<Shop setAuthState={setAuthState} />} /> */}
-          <Route path="/shop" element={<Shop setAuthState={setAuthState} />} />
+          <Route path="/shop" element={<Shop drug={drug} setAuthState={setAuthState} />} />
           <Route path="/registration" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
           <Route path="/DrugList" element={<DrugList drug={drug} setAuthState={setAuthState} />} />

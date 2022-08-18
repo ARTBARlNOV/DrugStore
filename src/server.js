@@ -6,6 +6,7 @@ import indexRoute from './routes/index';
 // import authCheck from './middlewares/authCheck';
 import apiVxod from './routes/apiVxod';
 import DrugList from './routes/DrugList';
+import Shop from './routes/Shop';
 import Korzina from './routes/Korzina';
 
 const PORT = 3000;
@@ -36,6 +37,7 @@ app.use('/', indexRoute);
 // app.use(authCheck);
 app.use('/api', apiVxod);
 app.use('/DrugList', DrugList);
+app.use('/shop', Shop);
 app.use('/Korzina', Korzina);
 
 app.listen(PORT, () => {

@@ -16,17 +16,6 @@ route.get('/', async (req, res) => {
   }
 });
 
-route.get('/shop', async (req, res) => {
-  try {
-    const initState = { path: req.originalUrl };
-    const html = renderToString(<Layout initState={initState} />);
-    res.write('<!DOCTYPE html>');
-    res.end(html);
-  } catch (err) {
-    console.error(err);
-  }
-});
-
 route.get('/registration', async (req, res) => {
   try {
     const initState = { path: req.originalUrl, userSession: req.session?.userSession };
