@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import session from 'express-session';
 import store from 'session-file-store';
 import indexRoute from './routes/index';
-import authCheck from './middlewares/authCheck';
+// import authCheck from './middlewares/authCheck';
 import apiVxod from './routes/apiVxod';
 import DrugList from './routes/DrugList';
 import Korzina from './routes/Korzina';
