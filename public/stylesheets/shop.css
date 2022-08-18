@@ -6,9 +6,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* background-color: rgb(76, 122, 70); */
     background-image: url('https://wallpaperaccess.com/full/187163.jpg');
-    
     border-radius: 5px;
   }
 
