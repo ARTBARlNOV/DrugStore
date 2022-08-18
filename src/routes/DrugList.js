@@ -8,6 +8,7 @@ const route = express.Router();
 
 route.get('/', async (req, res) => {
   const drug = await Drug.findAll({ raw: true });
+  console.log(drug);
   const initState = { path: req.originalUrl, userSession: req.session.userSession, drug };
   const html = renderToString(<Layout initState={initState} />);
   res.write('<!DOCTYPE html>');
