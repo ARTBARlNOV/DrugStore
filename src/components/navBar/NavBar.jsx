@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import Korzina from './Korzina';
+import { Link, useNavigate } from 'react-router-dom';
+// import Korzina from './Korzina';
 
 export default function NavBar({ authState, setAuthState }) {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ export default function NavBar({ authState, setAuthState }) {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <NavLink to="/" className="navbar-brand"><img className="logo" src="./log.png" alt="лого" /></NavLink>
+        <Link to="/" className="navbar-brand"><img className="logo" src="./log.png" alt="лого" /></Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
@@ -26,18 +26,18 @@ export default function NavBar({ authState, setAuthState }) {
               ? (
                 <>
                   <li className="nav-item">
-                    <NavLink to="/registration" className="nav-link active" aria-current="page">Регистрация</NavLink>
+                    <Link to="/registration" className="nav-link active" aria-current="page">Регистрация</Link>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/login" className="nav-link">Авторизация</NavLink>
+                    <Link to="/login" className="nav-link">Авторизация</Link>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/korzina" className="nav-link"> корзина</NavLink>
+                    <Link to="/korzina" className="nav-link"> корзина</Link>
                   </li>
                 </>
               ) : (
                 <li className="nav-item">
-                  <NavLink onClick={logoutHandler} className="nav-link">Выход</NavLink>
+                  <button onClick={logoutHandler} className="nav-link">Выход</button>
                 </li>
               )}
           </ul>

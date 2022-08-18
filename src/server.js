@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import session from 'express-session';
 import store from 'session-file-store';
 import indexRoute from './routes/index';
-import authCheck from './middlewares/authCheck';
+// import authCheck from './middlewares/authCheck';
 import apiVxod from './routes/apiVxod';
 
 const PORT = 3000;
@@ -31,8 +31,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.use('/', indexRoute);
-app.use(authCheck);
 app.use('/api', apiVxod);
+// app.use(authCheck);
 
 app.listen(PORT, () => {
   console.log('Server start on', PORT);
