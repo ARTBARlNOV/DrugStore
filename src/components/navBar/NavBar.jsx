@@ -32,7 +32,7 @@ export default function NavBar({ authState, setAuthState }) {
                     <NavLink to="/login" className="nav-link">Авторизация</NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink to="/korzina" className="nav-link"><Korzina /></NavLink>
+                    <NavLink to="/korzina" className="nav-link"> корзина</NavLink>
                   </li>
                 </>
               ) : (
