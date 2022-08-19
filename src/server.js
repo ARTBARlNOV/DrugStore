@@ -36,7 +36,6 @@ app.use(express.static('public'));
 app.use('/', indexRoute);
 // app.use(authCheck);
 app.use('/api', apiVxod);
-app.use('/DrugList', DrugList);
 app.use('/shop', Shop);
 app.use('/Korzina', Korzina);
 

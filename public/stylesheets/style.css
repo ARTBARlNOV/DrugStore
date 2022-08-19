@@ -3,6 +3,9 @@ body {
     color: aliceblue;
     background-color: rgb(32, 33, 36);
   }
+.naw-bar-block{
+display: flex;
+}
 
 .container {
   /* width: 1024px; */

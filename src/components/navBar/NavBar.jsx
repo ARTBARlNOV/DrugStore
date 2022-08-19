@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import Korzina from './Korzina';
-import DrugList from '../DrugList';
 
 export default function NavBar({ authState, setAuthState }) {
   const navigate = useNavigate();
@@ -38,15 +37,9 @@ export default function NavBar({ authState, setAuthState }) {
 
                 </>
               ) : (
-                <div>
+                <div className="naw-bar-block">
                   <li className="nav-item">
                     <NavLink to="/shop" className="nav-link active" aria-current="page">Магазин</NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink to="/Druglist" className="nav-link">
-                      <DrugList />
-                      Список товаров
-                    </NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink to="/korzina" className="nav-link"><Korzina /></NavLink>

@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './navBar/Login';
 import NavBar from './navBar/NavBar';
 import Registration from './navBar/Registration';
-import DrugList from './DrugList';
 import Privetstvie from './navBar/Privetstvie';
 import Korzina from './navBar/Korzina';
 import Shop from './ShopPage/Shop';
@@ -20,7 +19,6 @@ function App({ drug, userSession }) {
           <Route path="/shop" element={<Shop drug={drug} setAuthState={setAuthState} />} />
           <Route path="/registration" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
-          <Route path="/DrugList" element={<DrugList drug={drug} setAuthState={setAuthState} />} />
           <Route path="/korzina" element={<Korzina setAuthState={setAuthState} />} />
         </Routes>
       </div>
