@@ -35,6 +35,13 @@ export default function NavBar({ authState, setAuthState }) {
                   <li className="nav-item">
                     <Link to="/login" className="nav-link">Авторизация</Link>
                   </li>
+
+                </>
+              ) : (
+                <div>
+                  <li className="nav-item">
+                    <NavLink to="/shop" className="nav-link active" aria-current="page">Магазин</NavLink>
+                  </li>
                   <li className="nav-item">
                     <NavLink to="/Druglist" className="nav-link">
                       <DrugList />
@@ -44,9 +51,6 @@ export default function NavBar({ authState, setAuthState }) {
                   <li className="nav-item">
                     <NavLink to="/korzina" className="nav-link"><Korzina /></NavLink>
                   </li>
-                </>
-              ) : (
-                <div>
                   <li className="nav-item">
                     <button onClick={logoutHandler} className="nav-link">Выход</button>
                   </li>

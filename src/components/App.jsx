@@ -9,7 +9,10 @@ import Korzina from './navBar/Korzina';
 import Shop from './ShopPage/Shop';
 
 function App({ drug, userSession }) {
+<<<<<<< HEAD
   // console.log(drug);
+=======
+>>>>>>> origin/navBar
   const [authState, setAuthState] = useState(userSession || null);
   return (
     <>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Privetstvie({ authState }) {
+  console.log(`authState -->${authState}`);
   return (
     <div>
       <h1>Main Page</h1>
