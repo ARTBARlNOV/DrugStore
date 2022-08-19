@@ -1,7 +1,8 @@
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    color: aliceblue;
-    background-color: rgb(32, 33, 36);
+      color: aliceblue;
+      background-color: rgb(32, 33, 36);
+      
   }
 .naw-bar-block{
 display: flex;
@@ -31,4 +32,6 @@ img {
 .test {
   float: right;
 }
+
+
   

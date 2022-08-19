@@ -10,6 +10,7 @@ import Shop from './ShopPage/Shop';
 
 function App({ drug, userSession }) {
   const [authState, setAuthState] = useState(userSession || null);
+  const [cardlist, setCardlist] = useState([]);
   return (
     <>
       <NavBar authState={authState} setAuthState={setAuthState} />
@@ -20,8 +21,9 @@ function App({ drug, userSession }) {
           <Route path="/shop" element={<Shop drug={drug} setAuthState={setAuthState} />} />
           <Route path="/registration" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/login" element={<Login setAuthState={setAuthState} />} />
-          <Route path="/korzina" element={<Korzina setAuthState={setAuthState} />} />
+          <Route path="/korzina" element={<Korzina cardlist={cardlist} setCardList={setCardlist} setAuthState={setAuthState} />} />
         </Routes>
+        {/* <img className="Drugstore" src="./ultramed_-_dribbble.webp" alt="Аптека" /> */}
       </div>
     </>
   );
