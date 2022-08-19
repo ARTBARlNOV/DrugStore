@@ -19,6 +19,8 @@ export default function Shop({ drug }) {
 
             <div className="product-price">
               {el.price}
+              {' '}
+              руб.
             </div>
             <div>
               <button className="product-add-btn">Купить</button>

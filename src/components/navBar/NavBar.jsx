@@ -48,7 +48,7 @@ export default function NavBar({ authState, setAuthState }) {
               ) : (
                 <div>
                   <li className="nav-item">
-                    <NavLink onClick={logoutHandler} className="nav-link">Выход</NavLink>
+                    <button onClick={logoutHandler} className="nav-link">Выход</button>
                   </li>
                 </div>
               )}
