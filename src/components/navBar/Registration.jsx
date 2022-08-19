@@ -30,10 +30,10 @@ export default function Registration({ setAuthState }) {
 
   return (
     <div>
-      <h3>Registration</h3>
+      <h3>Регистрация</h3>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
+          <label htmlFor="exampleInputEmail1" className="form-label">Имя</label>
           <input name="name" onChange={changeHandler} value={inputs.name} type="text" className="inputttt form-control" id="exampleInputName" aria-describedby="nameHelp" />
         </div>
         <div className="mb-3">
@@ -44,7 +44,7 @@ export default function Registration({ setAuthState }) {
           <label htmlFor="exampleInputPassword1" className="form-label">Пароль</label>
           <input name="password" onChange={changeHandler} value={inputs.password} type="password" className="inputttt form-control" id="exampleInputPassword1" />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
       </form>
     </div>
   );

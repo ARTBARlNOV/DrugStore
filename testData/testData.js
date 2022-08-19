@@ -56,6 +56,13 @@ const data = {
       img: 'https://vplaboratory.ru/wa-data/public/shop/products/58/00/58/images/837/837.970.jpg',
       status: true,
     },
+    {
+      id: 1,
+      name: 'Мельдоний',
+      price: 768,
+      img: 'https://static3.asna.ru/imgprx/nLm3USlKyEVHmeLfwZCfff06qij6z5p2ewFRuC2aJGg/rs:fit:800:632:1/g:no/aHR0cHM6Ly9pbWdzLmFzbmEucnUvaWJsb2NrLzBlZS8wZWU4MjNmYmU1OGI4Y2Y4ZWQ1MjlmZTQwMjUzM2M4OC9iOTdhZDI5NDNjMmM2NTNlYWY3YmNiYTM4MDJjZGU5Ni5qcGc.jpg',
+      status: true,
+    },
   ],
 };
 
