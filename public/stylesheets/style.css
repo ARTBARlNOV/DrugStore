@@ -24,4 +24,11 @@ img {
   width: 15rem;
 }
 
+.privetBlock {
+  display: inline-block;
+}
+
+.test {
+  float: right;
+}
   

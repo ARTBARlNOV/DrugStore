@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 import Login from './navBar/Login';
 import NavBar from './navBar/NavBar';
 import Registration from './navBar/Registration';
@@ -23,7 +24,6 @@ function App({ drug, userSession }) {
         </Routes>
       </div>
     </>
-
   );
 }
 

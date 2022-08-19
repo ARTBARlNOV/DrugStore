@@ -25,8 +25,9 @@ export default function Layout({ initState }) {
         />
 
         {/* скрипты собранные через Webpack */}
-        <script defer src="/app.js" />
-        <script defer src="/vendor.js" />
+        <script defer src="app.js" />
+        <script defer src="vendor.js" />
+        <link rel="stylesheet" href="styles.css" />
         <title>DrugStore</title>
       </head>
       <body>
