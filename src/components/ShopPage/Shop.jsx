@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Checkbox from './Checkbox';
 import React, { useEffect, useState } from 'react';
+import Checkbox from './Checkbox';
+
 
 export default function Shop({ drug, setCardList }) {
   const [drugState, setdrugState] = useState(drug);
@@ -12,9 +12,7 @@ export default function Shop({ drug, setCardList }) {
   // };
 
   useEffect(() => {
-    fetch('/api/shop', {
-      method: 'GET',
-    })
+    fetch('http://localhost:3000/api/shop')
       .then((res) => res.json())
       .then((data) => setdrugState(data));
   }, []);
@@ -24,7 +22,7 @@ export default function Shop({ drug, setCardList }) {
       <Checkbox check={check} setCheck={setCheck} check1={check1} setCheck1={setCheck1} />
  
       <div className="products">
-        { drug?.filter((elem) => {
+        { drugState?.filter((elem) => {
           if (check) return elem.avail;
           return true;
         }).sort((a, b) => {

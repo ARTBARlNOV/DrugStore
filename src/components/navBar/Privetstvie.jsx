@@ -10,7 +10,7 @@ export default function Privetstvie({ authState }) {
   return (
     <>
       <div className="privetBlock">
-        <h1>Main Page</h1>
+        <h1>Вы находитесь на главной странице:</h1>
         <p>
           Добрый день,
           {' '}

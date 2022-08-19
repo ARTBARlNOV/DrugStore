@@ -1,7 +1,4 @@
 import express from 'express';
-import { renderToString } from 'react-dom/server';
-import React from 'react';
-import Layout from '../components/Layout';
 import { Drug } from '../db/models';
 
 const route = express.Router();

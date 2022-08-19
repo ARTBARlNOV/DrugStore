@@ -1,7 +1,8 @@
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-      color: aliceblue;
-      background-color: rgb(32, 33, 36);
+      color:rgb(48, 47, 47);
+background-color: #cec4b2;
+height: 130vh;
       
   }
 .naw-bar-block{
@@ -31,6 +32,10 @@ img {
 
 .test {
   float: right;
+}
+
+.root {
+background-image: url(../1155052.jpg);
 }
 
 
