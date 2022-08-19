@@ -5,8 +5,9 @@ import store from 'session-file-store';
 import indexRoute from './routes/index';
 // import authCheck from './middlewares/authCheck';
 import apiVxod from './routes/apiVxod';
-import Shop from './routes/Shop';
+import apiShop from './routes/apiShop';
 import Korzina from './routes/Korzina';
+import Shop from './routes/Shop';
 
 const PORT = 3000;
 const app = express();
@@ -35,6 +36,7 @@ app.use(express.static('public'));
 app.use('/', indexRoute);
 // app.use(authCheck);
 app.use('/api', apiVxod);
+app.use('/api/shop', apiShop);
 app.use('/shop', Shop);
 app.use('/Korzina', Korzina);
 
