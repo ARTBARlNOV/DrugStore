@@ -17,10 +17,6 @@ html {
   background-color: rgb(32, 33, 36);;
 }
 
-/* body {
-  height: 100%;
-} */
-
 a {
   color: #32bb7d;
   text-decoration: none;
@@ -57,8 +53,6 @@ input[type=text], input[type=password], textarea {
   float: right;
 }
 
-
-/* formatting */
 .bg-dk-green {
   background-color: #05724f;
 }
@@ -285,10 +279,6 @@ input[type=text], input[type=password], textarea {
   padding: 20px;
   margin: 0 auto;
   text-align: center;
-}
-
-.logo {
-  width:160px;
 }
 
 .error {

@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-export default function Korzina() {
+export default function Korzina({ cardlist, setCardlist }) {
+  
   return (
-    <div>Korzina</div>
-  )
+    <div>Корзина</div>
+  );
 }

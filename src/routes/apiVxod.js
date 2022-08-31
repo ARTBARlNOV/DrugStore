@@ -1,37 +1,37 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
-// import { User } from '../db/models';
+import { User } from '../db/models';
 
 const route = express.Router();
 
 route.post('/registration', async (req, res) => {
-  const { email, password } = req.body;
+  const { name, email, password } = req.body;
   const hashPassword = await bcrypt.hash(password, 10);
   try {
-    const user = await User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { name } });
     if (!user) {
-      const newUser = await User.create({ email, password: hashPassword });
-      req.session.userSession = { email: newUser.email };
-      return res.json({ email: newUser.email });
+      const newUser = await User.create({ name, email, password: hashPassword });
+      req.session.userSession = { name: newUser.name };
+      return res.json({ name: newUser.name });
     }
-    res.status(400).json({ message: 'Такой email уже занят' });
+    res.status(400).json({ message: 'Такой name уже занят' });
   } catch (err) {
     console.error(err);
   }
 });
 
 route.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+  const { name, password } = req.body;
   try {
-    const user = await User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { name } });
     if (user) {
-      const checkPass = await bcrypt.compare(password, user.password); // возвращает boolean значение
+      const checkPass = await bcrypt.compare(password, user.password);
       if (checkPass) {
-        req.session.userSession = { email: user.email };
-        return res.json({ email: user.email });
+        req.session.userSession = { name: user.name };
+        return res.json({ name: user.name });
       }
     }
-    res.status(400).json({ message: 'Email или пароль не верны' });
+    res.status(400).json({ message: 'name или пароль не верны' });
   } catch (err) {
     console.error(err);
   }

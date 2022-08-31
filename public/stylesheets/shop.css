@@ -6,9 +6,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* background-color: rgb(76, 122, 70); */
-    background-image: url('https://wallpaperaccess.com/full/187163.jpg');
-    
+    background-color: whitesmoke;
     border-radius: 5px;
   }
 
@@ -29,12 +27,14 @@
     max-width: 200px;
     min-height: 200px;
     display: block;
-    object-fit: cover;   
+    object-fit: cover;  
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .product-name {
-    text-transform: uppercase;
     margin: 10px 0px;
+    text-align: center;
 }
 
 .product-price {
@@ -42,6 +42,7 @@
     padding-bottom: 20px;
     font-size: 18px;
     line-height: 30px;
+    text-align: center;
 }
 
 .product-add-btn {

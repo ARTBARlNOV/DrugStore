@@ -12,6 +12,7 @@ export default function Layout({ initState }) {
         {/* <link rel="icon" href="/img/icon-48x48.png" /> */}
         {/* скрипт наполнения вспомогательнго объекта initState для работы гидратации */}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="/stylesheets/navbar.css" />
         <link rel="stylesheet" href="/stylesheets/shop.css" />
         <link rel="stylesheet" href="/stylesheets/normalize.css" />
         <link rel="stylesheet" href="/stylesheets/application.css" />
@@ -24,8 +25,9 @@ export default function Layout({ initState }) {
         />
 
         {/* скрипты собранные через Webpack */}
-        <script defer src="/app.js" />
-        <script defer src="/vendor.js" />
+        <script defer src="app.js" />
+        <script defer src="vendor.js" />
+        <link rel="stylesheet" href="styles.css" />
         <title>DrugStore</title>
       </head>
       <body>
