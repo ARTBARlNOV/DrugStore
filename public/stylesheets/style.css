@@ -1,0 +1,42 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+      color:rgb(48, 47, 47);
+background-color: #cec4b2;
+height: 130vh;
+      
+  }
+.naw-bar-block{
+display: flex;
+}
+
+.container {
+  /* width: 1024px; */
+  padding: 20px;
+}
+
+img {
+  width: 500px;
+}
+
+.logo {
+  width: 40px;
+}
+
+.inputttt {
+  width: 15rem;
+}
+
+.privetBlock {
+  display: inline-block;
+}
+
+.test {
+  float: right;
+}
+
+.root {
+background-image: url(../1155052.jpg);
+}
+
+
+  
